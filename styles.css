@@ -35,8 +35,10 @@ html::-webkit-scrollbar {
 }
 
 /* Hamburger Icon */
+
 .navbar-toggler {
   margin-right: 2.5rem;
+  filter: invert(1);
 }
 
 .navbar-nav {
@@ -57,7 +59,7 @@ html::-webkit-scrollbar {
 }
 
 /* Media Query for Hamburger Menu */
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
   #logo img {
     border-radius: 10px;
     width: 280px;
@@ -135,7 +137,7 @@ html::-webkit-scrollbar {
 }
 
 #home .sub-content h3 {
-  font-size: 50px;
+  font-size: 90px;
   color: white;
 }
 
@@ -150,9 +152,55 @@ html::-webkit-scrollbar {
     0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-#btn {
+/* Media Query for Home Start */
+@media (max-width: 982px) {
+  #home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+  }
+
+  #home .sub-content {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  #home .sub-content h3 {
+    font-size: 80px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  #home .sub-content p {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 766px) {
+  #home .sub-content h3 {
+    font-size: 51px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Media Query for Home End */
+
+#home-btn {
   width: 150px;
-  height: 36px;
+  height: 50px;
+  border-radius: 5px;
   margin-top: 20px;
   background-color: white;
   font-weight: bold;
@@ -161,9 +209,90 @@ html::-webkit-scrollbar {
   cursor: pointer;
 }
 
-#btn:hover {
-  background-color: rgb(196, 107, 56);
+#home-btn:hover {
+  background-color: #ee4646;
   color: white;
 }
 
 /* Home Section End */
+
+/* About Section Start */
+#about {
+  width: 100%;
+  height: 100vh;
+}
+
+#about .container {
+  margin-top: 70px;
+  padding-bottom: 25px;
+  border: 1px solid black;
+}
+
+#about .card img {
+  border-radius: 10px;
+}
+
+/* Media Queries for About Start */
+@media (max-width: 982px) {
+
+  #about p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 766px) {
+  #about {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 120vh;
+    padding-top: 0;
+  }
+
+  #about p {
+    font-size: 16px;
+  }
+
+  .about-subheading {
+    margin-top: 25px;
+  }
+}
+
+/* Media Queries for About End */
+
+#about-btn {
+  width: 300px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #ee4646;
+  border-radius: 5px;
+  color: #ee4646;
+  font-weight: bold;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#about-btn:hover {
+  background-color: #ee4646;
+  color: white;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+  color: black;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.heading span {
+  color: #ee4646;
+}
+
+/* About Section End */
