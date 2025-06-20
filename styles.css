@@ -14,7 +14,7 @@ html ::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: #ee4646;
+  background-color: #2E8B57;
   border-radius: 10px;
 }
 
@@ -30,7 +30,7 @@ html::-webkit-scrollbar {
 /* Navbar Image Logo */
 #logo img {
   border-radius: 10px;
-  width: 280px;
+  width: 250px;
   margin-left: 10px;
 }
 
@@ -47,22 +47,31 @@ html::-webkit-scrollbar {
 
 .nav-item .nav-link {
   color: black;
-  margin-left: 10px;
+  margin-left: 12px;
   font-weight: bold;
   transition: 0.5s;
-  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+#navbar .navbar-nav .nav-item .nav-link.active {
+  color: black !important;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  font-weight: 800;
+  background-color: transparent;
 }
 
 .navbar .container-fluid {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* Media Query for Hamburger Menu */
+/* Media Query for Hamburger Menu Start */
 @media (max-width: 1200px) {
   #logo img {
     border-radius: 10px;
-    width: 280px;
+    max-width: 250px;
+    width: 100%;
     margin-left: 20px;
   }
 
@@ -75,14 +84,14 @@ html::-webkit-scrollbar {
   }
 
   .navbar-collapse .nav-item {
-    margin: 2px;
+    margin: 0;
     padding: 0;
     width: 100%;
     text-align: center;
   }
 
   .navbar-collapse .nav-item .nav-link {
-    font-size: 26.3px;
+    font-size: 1.6rem;
     padding: 8px 5px;
     display: inline-block;
     border-radius: 5px;
@@ -90,7 +99,7 @@ html::-webkit-scrollbar {
   }
 
   .navbar-collapse .nav-item .nav-link:hover {
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     color: black;
   }
 
@@ -99,18 +108,20 @@ html::-webkit-scrollbar {
   }
 }
 
-/* End of Media Query */
+@media (max-width: 576px) {
+  #logo img {
+    border-radius: 10px;
+    width: 220px;
+    margin-left: 20px;
+  }
+}
+
+/* Media Query for Hamburger Menu End */
 
 .nav-item .nav-link:hover {
   background-color: #f7f5f2;
   border-radius: 5px;
   color: black;
-}
-
-#navbar form button {
-  background-color: black;
-  color: #f7f5f2;
-  border: 1px solid #f7f5f2;
 }
 
 .heart-trigger {
@@ -122,7 +133,7 @@ html::-webkit-scrollbar {
 /* Home Section Start */
 #home {
   width: 100%;
-  height: 70vh;
+  min-height: 80vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
     url(./images/strawberry_background_art_12_3.jpg);
   background-repeat: no-repeat;
@@ -137,23 +148,22 @@ html::-webkit-scrollbar {
 }
 
 #home .sub-content h3 {
-  font-size: 90px;
+  font-size: 5.6rem;
   color: white;
 }
 
 #home .sub-content p {
-  margin-top: 10px;
+  margin-top: 20px;
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.6;
-  margin-top: 10px;
 
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9),
     0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Media Query for Home Start */
-@media (max-width: 982px) {
+@media (max-width: 992px) {
   #home {
     display: flex;
     align-items: center;
@@ -175,23 +185,29 @@ html::-webkit-scrollbar {
   }
 
   #home .sub-content h3 {
-    font-size: 80px;
+    font-size: 5rem;
     margin-top: 0;
     margin-bottom: 10px;
   }
 
   #home .sub-content p {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-top: 10px;
     margin-bottom: 20px;
   }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 768px) {
   #home .sub-content h3 {
-    font-size: 51px;
+    font-size: 3.5rem;
     margin-top: 0;
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #home .sub-content h3 {
+    font-size: 3rem;
   }
 }
 
@@ -201,12 +217,14 @@ html::-webkit-scrollbar {
   width: 150px;
   height: 50px;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background-color: white;
   font-weight: bold;
   border: none;
   transition: 0.5s ease;
   cursor: pointer;
+  border: 1px solid black;
 }
 
 #home-btn:hover {
@@ -219,7 +237,6 @@ html::-webkit-scrollbar {
 /* About Section Start */
 #about {
   width: 100%;
-  height: 100vh;
 }
 
 #about .container {
@@ -233,30 +250,29 @@ html::-webkit-scrollbar {
 }
 
 /* Media Queries for About Start */
-@media (max-width: 982px) {
-
+@media (max-width: 992px) {
   #about p {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 768px) {
   #about {
     margin-left: 0;
     margin-right: 0;
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 120vh;
-    padding-top: 0;
   }
 
   #about p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .about-subheading {
@@ -264,10 +280,29 @@ html::-webkit-scrollbar {
   }
 }
 
+@media (max-width: 576px) {
+  #about {
+    min-height: auto;
+  }
+
+  #about .container .heading {
+    font-size: 2.2rem;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  #about {
+    min-height: auto;
+  }
+}
+
 /* Media Queries for About End */
 
 #about-btn {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 2em;
   height: 50px;
   background: transparent;
   border: 2px solid #ee4646;
@@ -287,7 +322,7 @@ html::-webkit-scrollbar {
   text-align: center;
   margin-bottom: 50px;
   color: black;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bolder;
 }
 
@@ -296,3 +331,101 @@ html::-webkit-scrollbar {
 }
 
 /* About Section End */
+
+/* Top Cards Section Start */
+#top-cards {
+  width: 100%;
+  background-color: #f7f5f2;
+  padding: 50px 0;
+}
+
+.heading2 {
+  color: black;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.heading2 span {
+  color: #ee4646;
+}
+
+#top-cards .card {
+  border-radius: 2px;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#top-cards .card img {
+  border-radius: 2px;
+  border: 1px solid black;
+  width: 100%;
+  /* Image fills its container */
+  height: auto;
+  /* Maintain aspect ratio */
+  display: block;
+  /* Removes any extra space below images */
+}
+
+#top-cards .card:hover {
+  transform: translateY(-10px);
+}
+
+.card .card-text {
+  text-align: center;
+  padding: 10px;
+  text-decoration: underline;
+}
+
+/* Media Queries for Top Cards Start */
+@media (max-width: 992px) {
+  #top-cards {
+    padding: 40px 0;
+  }
+
+  .sub-content .card-text h4 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-content .card-text h4 {
+    font-size: 1.4rem;
+  }
+
+  .heading2 {
+    font-size: 2.2rem;
+  }
+
+  .card {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  #top-cards {
+    padding: 20px 0;
+  }
+
+  #top-cards .card {
+    margin-bottom: 15px;
+  }
+
+  .sub-content .card-text h4 {
+    font-size: 1.375rem;
+  }
+}
+
+/* Media Queries for Top Cards End */
+
+/* Top Cards Section End */
