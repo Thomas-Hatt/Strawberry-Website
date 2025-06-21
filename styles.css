@@ -249,6 +249,11 @@ html::-webkit-scrollbar {
   border-radius: 10px;
 }
 
+#about p {
+  font-size: 1.2rem;
+  padding-top: 1rem;
+}
+
 /* Media Queries for About Start */
 @media (max-width: 992px) {
   #about p {
@@ -272,7 +277,7 @@ html::-webkit-scrollbar {
   }
 
   #about p {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .about-subheading {
@@ -336,7 +341,7 @@ html::-webkit-scrollbar {
 #top-cards {
   width: 100%;
   background-color: #f7f5f2;
-  padding: 50px 0;
+  padding: 9rem 0;
 }
 
 .heading2 {
@@ -382,18 +387,22 @@ html::-webkit-scrollbar {
 
 /* Media Queries for Top Cards Start */
 @media (max-width: 992px) {
-  #top-cards {
-    padding: 40px 0;
+  .sub-content .card-text h4 {
+    font-size: 1.8rem;
   }
 
-  .sub-content .card-text h4 {
-    font-size: 1.25rem;
+  .heading2 {
+    font-size: 2.2rem;
+  }
+
+  #top-cards {
+    padding: 40px 0;
   }
 }
 
 @media (max-width: 768px) {
   .sub-content .card-text h4 {
-    font-size: 1.4rem;
+    font-size: 2.2rem;
   }
 
   .heading2 {
@@ -422,10 +431,123 @@ html::-webkit-scrollbar {
   }
 
   .sub-content .card-text h4 {
-    font-size: 1.375rem;
+    font-size: 1.8rem;
+    margin: 2rem 0 2rem 0;
   }
 }
 
 /* Media Queries for Top Cards End */
 
 /* Top Cards Section End */
+
+/* Menu Section Start */
+#menu-card {
+  border: 0.3px solid black;
+}
+
+#menu-card-body {
+  border: 1px solid black;
+}
+
+.dried-strawberries-menu,
+.fresh-strawberries-menu,
+.candy-strawberries-menu {
+  padding: 50px 10px 50px 10px;
+  margin: 15px 0 15px 0;
+}
+
+.dried-strawberries-menu {
+  background-color: #fff8e1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.336);
+}
+
+.fresh-strawberries-menu {
+  background-color: #e1ffe1;
+  box-shadow: 0 4px 8px rgba(42, 133, 0, 0.541);
+}
+
+.candy-strawberries-menu {
+  background-color: #FFE1FF;
+  box-shadow: 0 4px 8px rgba(56, 0, 102, 0.39)
+}
+
+.star i {
+  color: red;
+}
+
+#menu h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+#menu p {
+  font-size: 1.2rem;
+  padding-top: 15px;
+}
+
+#menu p span {
+  float: right;
+  cursor: pointer;
+}
+
+/* Media Queries for Menu Start */
+@media (max-width: 992px) {
+  #menu h3 {
+    font-size: 1.2rem;
+  }
+
+  #menu p {
+    text-align: center;
+  }
+
+  #menu p span {
+    padding: 2rem 0 0 0;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu p {
+    text-align: center;
+  }
+
+  #menu p span {
+    padding: 2rem 0 0 0;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .star i {
+    padding: 1.5rem 2px 1.5rem 2px;
+    font-size: 1.5rem;
+  }
+
+  #menu h3 {
+    font-size: 2rem;
+  }
+
+  #menu p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #menu p span {
+    padding: 2rem 0 0 0;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2.5rem;
+  }
+}
+
+/* Media Queries for Menu End */
+
+/* Menu Section End */
