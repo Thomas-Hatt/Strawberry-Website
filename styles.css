@@ -9,6 +9,10 @@
   background-color: #f7f5f2;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html ::-webkit-scrollbar-track {
   background-color: transparent;
 }
@@ -39,6 +43,8 @@ html::-webkit-scrollbar {
 .navbar-toggler {
   margin-right: 2.5rem;
   filter: invert(1);
+  height: 64px;
+  width: 64px;
 }
 
 .navbar-nav {
@@ -73,6 +79,10 @@ html::-webkit-scrollbar {
     max-width: 250px;
     width: 100%;
     margin-left: 20px;
+  }
+
+  #navbarSupportedContent {
+    max-height: 300px;
   }
 
   .navbar-nav {
@@ -153,7 +163,7 @@ html::-webkit-scrollbar {
 }
 
 #home .sub-content p {
-  margin-top: 20px;
+  margin-top: 35px;
   color: white;
   font-size: 1.125rem;
   line-height: 1.6;
@@ -162,13 +172,46 @@ html::-webkit-scrollbar {
     0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+#shop-now-btn {
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: white;
+  font-weight: bold;
+  border: none;
+  transition: 0.5s ease;
+  cursor: pointer;
+  border: 1px solid black;
+  margin-top: 5.5rem;
+  width: 275px;
+  height: 80px;
+  font-size: 1.4rem;
+}
+
+#shop-now-btn:hover {
+  background-color: #ee4646;
+  color: white;
+}
+
 /* Media Query for Home Start */
-@media (max-width: 992px) {
+
+@media (max-width: 1400px) {
   #home {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    height: 80vh;
+  }
+
+  #home .sub-content h3 {
+    font-size: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 10px;
+  }
+
+  #home .sub-content p {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   #home .sub-content {
@@ -184,6 +227,17 @@ html::-webkit-scrollbar {
     padding-top: 0;
   }
 
+  #shop-now-btn,
+  #learn-more-btn,
+  #send-message-btn {
+    margin-top: 2.5rem;
+    width: 400px;
+    height: 80px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
   #home .sub-content h3 {
     font-size: 5rem;
     margin-top: 0;
@@ -191,7 +245,7 @@ html::-webkit-scrollbar {
   }
 
   #home .sub-content p {
-    font-size: 1.125rem;
+    font-size: 1.6rem;
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -203,34 +257,23 @@ html::-webkit-scrollbar {
     margin-top: 0;
     margin-bottom: 10px;
   }
+
+  #home .sub-content p {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 576px) {
   #home .sub-content h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+
+  #home .sub-content p {
+    font-size: 1rem;
   }
 }
 
 /* Media Query for Home End */
-
-#home-btn {
-  width: 150px;
-  height: 50px;
-  border-radius: 5px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  background-color: white;
-  font-weight: bold;
-  border: none;
-  transition: 0.5s ease;
-  cursor: pointer;
-  border: 1px solid black;
-}
-
-#home-btn:hover {
-  background-color: #ee4646;
-  color: white;
-}
 
 /* Home Section End */
 
@@ -254,10 +297,54 @@ html::-webkit-scrollbar {
   padding-top: 1rem;
 }
 
+#learn-more-btn {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 2em;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #ee4646;
+  border-radius: 5px;
+  color: #ee4646;
+  font-weight: bold;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#learn-more-btn:hover {
+  background-color: #ee4646;
+  color: white;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-top: 2rem;
+}
+
+.heading span {
+  color: #ee4646;
+}
+
 /* Media Queries for About Start */
 @media (max-width: 992px) {
   #about p {
     font-size: 1.125rem;
+  }
+
+  .shop-now-btn-container {
+    margin-top: 3rem;
+  }
+
+  #shop-now-btn,
+  #learn-more-btn,
+  #send-message-btn {
+    width: 225px;
+    height: 100px;
+    font-size: 1.25rem;
   }
 }
 
@@ -277,11 +364,19 @@ html::-webkit-scrollbar {
   }
 
   #about p {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
   }
 
   .about-subheading {
     margin-top: 25px;
+  }
+
+  #shop-now-btn,
+  #learn-more-btn,
+  #send-message-btn {
+    width: 170px;
+    height: 65px;
+    font-size: 1rem;
   }
 }
 
@@ -290,9 +385,21 @@ html::-webkit-scrollbar {
     min-height: auto;
   }
 
+  #about p {
+    font-size: 1rem;
+  }
+
   #about .container .heading {
     font-size: 2.2rem;
     margin-top: 30px;
+  }
+
+  #shop-now-btn,
+  #learn-more-btn,
+  #send-message-btn {
+    width: 115px;
+    height: 70px;
+    font-size: 0.9rem;
   }
 }
 
@@ -303,37 +410,6 @@ html::-webkit-scrollbar {
 }
 
 /* Media Queries for About End */
-
-#about-btn {
-  width: 100%;
-  max-width: 300px;
-  margin-top: 2em;
-  height: 50px;
-  background: transparent;
-  border: 2px solid #ee4646;
-  border-radius: 5px;
-  color: #ee4646;
-  font-weight: bold;
-  transition: 0.5s;
-  cursor: pointer;
-}
-
-#about-btn:hover {
-  background-color: #ee4646;
-  color: white;
-}
-
-.heading {
-  text-align: center;
-  margin-bottom: 50px;
-  color: black;
-  font-size: 2.5rem;
-  font-weight: bolder;
-}
-
-.heading span {
-  color: #ee4646;
-}
 
 /* About Section End */
 
@@ -385,10 +461,14 @@ html::-webkit-scrollbar {
   text-decoration: underline;
 }
 
+.card .card-text h4 {
+  font-weight: bold;
+}
+
 /* Media Queries for Top Cards Start */
 @media (max-width: 992px) {
   .sub-content .card-text h4 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .heading2 {
@@ -402,7 +482,7 @@ html::-webkit-scrollbar {
 
 @media (max-width: 768px) {
   .sub-content .card-text h4 {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
   }
 
   .heading2 {
@@ -443,6 +523,7 @@ html::-webkit-scrollbar {
 /* Menu Section Start */
 #menu-card {
   border: 0.3px solid black;
+  margin-bottom: 20px;
 }
 
 #menu-card-body {
@@ -456,17 +537,20 @@ html::-webkit-scrollbar {
   margin: 15px 0 15px 0;
 }
 
-.dried-strawberries-menu {
+.dried-strawberries-menu,
+#dried-strawberries-accordion-header {
   background-color: #fff8e1;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.336);
 }
 
-.fresh-strawberries-menu {
+.fresh-strawberries-menu,
+#fresh-strawberries-accordion-header {
   background-color: #e1ffe1;
   box-shadow: 0 4px 8px rgba(42, 133, 0, 0.541);
 }
 
-.candy-strawberries-menu {
+.candy-strawberries-menu,
+#candy-strawberries-accordion-header {
   background-color: #FFE1FF;
   box-shadow: 0 4px 8px rgba(56, 0, 102, 0.39)
 }
@@ -491,52 +575,33 @@ html::-webkit-scrollbar {
   cursor: pointer;
 }
 
+#dried-strawberries-accordion-header,
+#fresh-strawberries-accordion-header,
+#candy-strawberries-accordion-header {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  border: 1.5px solid black;
+}
+
 /* Media Queries for Menu Start */
 @media (max-width: 992px) {
-  #menu h3 {
-    font-size: 1.2rem;
-  }
 
-  #menu p {
-    text-align: center;
-  }
-
-  #menu p span {
-    padding: 2rem 0 0 0;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #menu p {
-    text-align: center;
-  }
-
-  #menu p span {
-    padding: 2rem 0 0 0;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .star i {
-    padding: 1.5rem 2px 1.5rem 2px;
-    font-size: 1.5rem;
-  }
-
-  #menu h3 {
+  #menu h3,
+  #dried-strawberries-accordion-header,
+  #fresh-strawberries-accordion-header,
+  #candy-strawberries-accordion-header {
     font-size: 2rem;
   }
 
+  .star i {
+    padding: 1.5rem 2px 1.5rem 2px;
+    font-size: 1.4rem;
+  }
+
   #menu p {
-    font-size: 1.5rem;
     text-align: center;
+    font-size: 1.5rem;
   }
 
   #menu p span {
@@ -548,6 +613,336 @@ html::-webkit-scrollbar {
   }
 }
 
+@media (max-width: 768px) {
+  #menu p {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  #menu p span {
+    font-size: 2.3rem;
+  }
+
+  #menu h3,
+  #dried-strawberries-accordion-header,
+  #fresh-strawberries-accordion-header,
+  #candy-strawberries-accordion-header {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .star i {
+    padding: 1.5rem 2px 1.5rem 2px;
+    font-size: 1.3rem;
+  }
+
+  #menu h3,
+  #dried-strawberries-accordion-header,
+  #fresh-strawberries-accordion-header,
+  #candy-strawberries-accordion-header {
+    font-size: 1.35rem;
+  }
+
+  #menu p {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  #menu p span {
+    font-size: 2.2rem;
+  }
+}
+
 /* Media Queries for Menu End */
 
 /* Menu Section End */
+
+/* Contact Us Start */
+#contact {
+  width: 100%;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+#contact .container {
+  width: 100%;
+  background: linear-gradient(90deg, white 80%, #ee4646 20%);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#contact .row {
+  margin: 0;
+}
+
+#contact .col-md-8,
+#contact .col-md-4 {
+  padding: 20px;
+}
+
+#contact p,
+.contact-us-info {
+  font-size: 1.2rem;
+  padding-top: 15px;
+  color: black;
+  text-align: left;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+#contact .form-control {
+  margin-bottom: 20px;
+  margin-top: 10px
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border: none;
+  border-bottom: 1px solid #ee4646;
+  background-color: transparent;
+  outline: none;
+  font-size: 1.3rem;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #ff0000;
+}
+
+#send-message-btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: white;
+  font-weight: bold;
+  border: none;
+  transition: 0.5s ease;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+#send-message-btn:hover {
+  background-color: #ee4646;
+  color: white;
+}
+
+#contact h1 {
+  color: white;
+  font-size: 2.1rem;
+  margin-top: 20px;
+  margin-left: 0;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#col {
+  background: black;
+  margin-top: 0;
+  padding: 20px;
+}
+
+#contact #col p {
+  color: white;
+  margin-left: 0;
+  margin-top: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+#contact-p {
+  margin-bottom: 4rem;
+}
+
+/* Media Queries for Contact Us Start */
+@media (max-width: 992px) {
+  #contact .container {
+    background: linear-gradient(90deg, white 70%, #ee4646 30%);
+  }
+
+  #contact p,
+  .contact-us-info {
+    text-align: center;
+    font-size: 1.125rem;
+  }
+
+  #contact p span {
+    padding: 2rem 0 0 0;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
+
+  #contact .col-md-8,
+  #contact .col-md-4 {
+    padding: 15px;
+  }
+
+  #contact h1 {
+    font-size: 1.8rem;
+  }
+
+  #contact #col p {
+    font-size: 1.1rem;
+  }
+
+  #contact input,
+  #contact textarea {
+    padding: 0.8rem;
+    font-size: 1.32rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact .container {
+    background: linear-gradient(180deg, white 70%, #ee4646 30%);
+    border-radius: 0;
+  }
+
+  #col {
+    width: 100%;
+    margin-top: 0;
+    padding: 30px 15px;
+  }
+
+  #contact h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  #contact #col p {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  #contact p,
+  .contact-us-info {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  #contact input,
+  #contact textarea {
+    padding: 0.7rem;
+    font-size: 1.25rem;
+  }
+
+  #send-message-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #contact .col-md-8,
+  #contact .col-md-4 {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #contact {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  #contact .container {
+    border-radius: 0;
+    background-color: white;
+  }
+
+  #contact .col-md-8,
+  #contact .col-md-4 {
+    padding: 10px;
+  }
+
+  #contact h1 {
+    font-size: 2.2rem;
+  }
+
+  #contact p,
+  .contact-us-info {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  #contact #col p {
+    font-size: 1.25rem;
+  }
+
+  #contact input,
+  #contact textarea {
+    padding: 0.6rem;
+    font-size: 1.25rem;
+  }
+
+  #send-message-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Media Queries for Contact Us End */
+
+/* Contact Us End */
+
+/* Footer Start */
+#footer {
+  width: 100%;
+  background: #99ffaf;
+  margin-top: 50px;
+}
+
+#footer .social-links i {
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-top: 30px;
+  padding: 10px;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.credits {
+  color: black;
+  margin-top: 20px;
+}
+
+.credits a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.credits a span {
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.copyright span {
+  color: black;
+}
+
+.copyright {
+  padding-bottom: 20px;
+}
+
+/* Footer End */

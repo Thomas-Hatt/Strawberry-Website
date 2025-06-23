@@ -34,7 +34,11 @@
       <div class="container-fluid p-0">
 
         <!-- Logo -->
-        <a class="navbar-brand" href="#" id="logo"><img src="./images/logo.png" alt="Pam's Strawberries Logo"></a>
+        <a class="navbar-brand" href="#" id="logo">
+          <div class="d-none d-lg-block">
+            <img src="./images/logo.png" alt="Pam's Strawberries Logo">
+          </div>
+        </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,27 +64,12 @@
 
             <!-- Menu Link -->
             <li class="nav-item">
-              <a class="nav-link" href="#">Menu</a>
-            </li>
-
-            <!-- Products Link -->
-            <li class="nav-item">
-              <a class="nav-link" href="#">Products</a>
-            </li>
-
-            <!-- Gallery Link -->
-            <li class="nav-item">
-              <a class="nav-link" href="#">Gallery</a>
+              <a class="nav-link" href="#menu">Menu</a>
             </li>
 
             <!-- Contact Link -->
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-
-            <!-- Blogs Link -->
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blogs</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
             <!-- Links End -->
 
@@ -101,7 +90,7 @@
           necessitatibus <br>
           pariatur dolore, dignissimos nisi cum.
         </p>
-        <div class="home-btn-container"><button id="home-btn">Shop Now</button></div>
+        <div class="home-btn-container"><button id="shop-now-btn">Shop Now</button></div>
       </div>
     </section>
     <!-- Home Section End -->
@@ -136,7 +125,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste enim dicta consequuntur harum quidem sed
                 pariatur et suscipit qui ipsa.
               </p>
-              <button id="about-btn">Learn More.</button>
+              <button id="learn-more-btn">Learn More.</button>
             </div>
           </div>
         </div>
@@ -204,315 +193,424 @@
     <!-- Dried Strawberries Menu Start -->
     <section id="menu">
       <div class="container">
-        <div class="dried-strawberries-menu">
-          <div class="heading2">Dried Strawberries Menu</div>
+        <!-- Dried Strawberries Accordion Heading Start -->
+        <div class="accordion" id="dried-strawberries-accordion">
+          <div class="accordion-item">
+            <div class="dried-strawberries-menu">
+              <div class="heading2 d-block d-lg-none">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseDriedStrawberries" aria-expanded="true"
+                  aria-controls="collapseDriedStrawberries" id="dried-strawberries-accordion-header">
+                  Dried Strawberries Menu
+                </button>
+              </div>
 
-          <div class="container" id="menu-container">
-            <div class="row">
+              <div class="heading2 d-none d-lg-block">Dried Strawberries Menu</div>
+              <!-- Dried Strawberries Accordion Heading End -->
 
-              <!-- Freeze Dried Strawberry Slices Card Start -->
-              <div class="col-md-3 py-3 py-md-0">
-                <div class="card" id="menu-card">
-                  <img src="./images/freeze_dried_strawberry_slices_edited.jpg" alt="Freeze Dried Strawberry Slices">
+              <!-- Dried Strawberries Accordion Paragraph Start -->
+              <div class="container" id="menu-container">
+                <div id="collapseDriedStrawberries" class="accordion-collapse collapse show d-lg-block"
+                  aria-labelledby="headingOne" data-bs-parent="#dried-strawberries-accordion">
+                  <div class="accordion-body row">
 
-                  <div class="card-body" id="menu-card-body">
-                    <div class="star text-center">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
+                    <!-- Freeze Dried Strawberry Slices Card Start -->
+                    <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                      <div class="card" id="menu-card">
+                        <img src="./images/freeze_dried_strawberry_slices_edited.jpg"
+                          alt="Freeze Dried Strawberry Slices">
+
+                        <div class="card-body" id="menu-card-body">
+                          <div class="star text-center">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <h3>Freeze Dried Strawberries</h3>
+                          <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                        </div>
+                      </div>
                     </div>
+                    <!-- Freeze Dried Strawberry Slices Card End -->
 
-                    <h3>Freeze Dried Strawberries</h3>
-                    <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+                    <!-- Diced Freeze Dried Strawberry Slices Card Start -->
+                    <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                      <div class="card" id="menu-card">
+                        <img src="./images/diced_freeze_dried_strawberries_edited.jpg"
+                          alt="Diced Freeze Dried Strawberries">
 
+                        <div class="card-body" id="menu-card-body">
+                          <div class="star text-center">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <h3>Diced Freeze Dried Strawberries</h3>
+                          <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Diced Freeze Dried Strawberry Slices Card End -->
+
+                    <!-- Dehydrated Strawberry Slices Card Start -->
+                    <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                      <div class="card" id="menu-card">
+                        <img src="./images/dehydrated_strawberry_slices_edited.jpg" alt="Dehydrated Strawberry Slices">
+
+                        <div class="card-body" id="menu-card-body">
+                          <div class="star text-center">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+
+                          <h3>Dehydrated Strawberry Slices</h3>
+                          <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Dehydrated Strawberry Slices Card End -->
+
+                    <!-- Rev Dried Strawberry Slices Card Start -->
+                    <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                      <div class="card" id="menu-card">
+                        <img src="./images/rev_dried_strawberry_slices_edited.jpg" alt="REV Dried Strawberry Slices">
+
+                        <div class="card-body" id="menu-card-body">
+                          <div class="star text-center">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <h3>REV Dried Strawberries</h3>
+                          <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Rev Dried Strawberry Slices Card End -->
                   </div>
                 </div>
               </div>
-              <!-- Freeze Dried Strawberry Slices Card End -->
-
-              <!-- Diced Freeze Dried Strawberry Slices Card Start -->
-              <div class="col-md-3 py-3 py-md-0">
-                <div class="card" id="menu-card">
-                  <img src="./images/diced_freeze_dried_strawberries_edited.jpg" alt="Diced Freeze Dried Strawberries">
-
-                  <div class="card-body" id="menu-card-body">
-                    <div class="star text-center">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
-                    </div>
-
-                    <h3>Diced Freeze Dried Strawberries</h3>
-                    <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
-
-                  </div>
-                </div>
-              </div>
-              <!-- Diced Freeze Dried Strawberry Slices Card End -->
-
-              <!-- Dehydrated Strawberry Slices Card Start -->
-              <div class="col-md-3 py-3 py-md-0">
-                <div class="card" id="menu-card">
-                  <img src="./images/dehydrated_strawberry_slices_edited.jpg" alt="Dehydrated Strawberry Slices">
-
-                  <div class="card-body" id="menu-card-body">
-                    <div class="star text-center">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-
-                    <h3>Dehydrated Strawberry Slices</h3>
-                    <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
-
-                  </div>
-                </div>
-              </div>
-              <!-- Dehydrated Strawberry Slices Card End -->
-
-              <!-- Rev Dried Strawberry Slices Card Start -->
-              <div class="col-md-3 py-3 py-md-0">
-                <div class="card" id="menu-card">
-                  <img src="./images/rev_dried_strawberry_slices_edited.jpg" alt="REV Dried Strawberry Slices">
-
-                  <div class="card-body" id="menu-card-body">
-                    <div class="star text-center">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
-                    </div>
-
-                    <h3>REV Dried Strawberries</h3>
-                    <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
-
-                  </div>
-                </div>
-              </div>
-              <!-- Rev Dried Strawberry Slices Card End -->
             </div>
           </div>
         </div>
-        <!-- Dried Strawberries Menu End -->
+      </div>
+      <!-- Dried Strawberries Accordion Paragraph End -->
+      <!-- Dried Strawberries Menu End -->
 
-        <!-- Fresh Strawberries Menu Start -->
-        <section id="menu">
-          <div class="fresh-strawberries-menu">
-            <div class="container">
-              <div class="heading2">Fresh Strawberries Menu</div>
-            </div>
+      <!-- Fresh Strawberries Menu Start -->
+      <section id="menu">
+        <div class="container">
+          <div class="accordion" id="fresh-strawberries-accordion">
+            <div class="accordion-item">
+              <div class="fresh-strawberries-menu">
+                <div class="heading2 d-block d-lg-none">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFreshStrawberries" aria-expanded="true"
+                    aria-controls="collapseFreshStrawberries" id="fresh-strawberries-accordion-header">
+                    Fresh Strawberries Menu
+                  </button>
+                </div>
 
-            <div class="container" id="menu-container">
-              <div class="row">
+                <div class="heading2 d-none d-lg-block">Fresh Strawberries Menu</div>
+                <!-- Fresh Strawberries Accordion Heading End -->
 
-                <!-- Pineberry Card Start -->
-                <div class="col-md-3 py-3 py-md-0">
-                  <div class="card" id="menu-card">
-                    <img src="./images/pineberry_edited.jpg" alt="Pineberry">
+                <!-- Fresh Strawberries Accordion Paragraph Start -->
+                <div class="container" id="menu-container">
+                  <div id="collapseFreshStrawberries" class="accordion-collapse collapse show d-lg-block"
+                    aria-labelledby="heading-fresh-strawberries" data-bs-parent="#fresh-strawberries-accordion">
+                    <div class="accordion-body row">
 
-                    <div class="card-body" id="menu-card-body">
-                      <div class="star text-center">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                      <!-- Pineberry Card Start -->
+                      <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                        <div class="card" id="menu-card">
+                          <img src="./images/pineberry_edited.jpg" alt="Pineberry">
+
+                          <div class="card-body" id="menu-card-body">
+                            <div class="star text-center">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <h3>Pineberry</h3>
+                            <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                          </div>
+                        </div>
                       </div>
+                      <!-- Pineberry Card End -->
 
-                      <h3>Pineberry</h3>
-                      <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+                      <!-- Calinda Strawberries Card Start -->
+                      <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                        <div class="card" id="menu-card">
+                          <img src="./images/calinda_edited.jpg" alt="Calinda Strawberries">
 
+                          <div class="card-body" id="menu-card-body">
+                            <div class="star text-center">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <h3>Calinda Strawberries</h3>
+                            <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Calinda Strawberries Card End -->
+
+                      <!-- Verdi Strawberries Card Start -->
+                      <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                        <div class="card" id="menu-card">
+                          <img src="./images/verdi_edited.jpg" alt="Verdi Strawberries">
+
+                          <div class="card-body" id="menu-card-body">
+                            <div class="star text-center">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <h3>Verdi Strawberries</h3>
+                            <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Verdi Strawberries Card End -->
+
+                      <!-- Allegro Strawberries Card Start -->
+                      <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                        <div class="card" id="menu-card">
+                          <img src="./images/allegro_strawberries_edited.jpg" alt="Allegro Strawberries">
+
+                          <div class="card-body" id="menu-card-body">
+                            <div class="star text-center">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <h3>Allegro Strawberries</h3>
+                            <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Allegro Strawberries Card End -->
                     </div>
                   </div>
                 </div>
-                <!-- Pineberry Card End -->
-
-                <!-- Calinda Strawberries Card Start -->
-                <div class="col-md-3 py-3 py-md-0">
-                  <div class="card" id="menu-card">
-                    <img src="./images/calinda_edited.jpg" alt="Calinda Strawberries">
-
-                    <div class="card-body" id="menu-card-body">
-                      <div class="star text-center">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                      </div>
-
-                      <h3>Calinda Strawberries</h3>
-                      <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
-
-                    </div>
-                  </div>
-                </div>
-                <!-- Calinda Strawberries Card End -->
-
-                <!-- Verdi Strawberries Card Start -->
-                <div class="col-md-3 py-3 py-md-0">
-                  <div class="card" id="menu-card">
-                    <img src="./images/verdi_edited.jpg" alt="Verdi Strawberries">
-
-                    <div class="card-body" id="menu-card-body">
-                      <div class="star text-center">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-
-                      <h3>Verdi Strawberries</h3>
-                      <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
-
-                    </div>
-                  </div>
-                </div>
-                <!-- Verdi Strawberries Card End -->
-
-                <!-- Allegro Strawberries Card Start -->
-                <div class="col-md-3 py-3 py-md-0">
-                  <div class="card" id="menu-card">
-                    <img src="./images/allegro_strawberries_edited.jpg" alt="Allegro Strawberries">
-
-                    <div class="card-body" id="menu-card-body">
-                      <div class="star text-center">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                      </div>
-
-                      <h3>Allegro Strawberries</h3>
-                      <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
-
-                    </div>
-                  </div>
-                </div>
-                <!-- Allegro Strawberries Card End -->
               </div>
             </div>
           </div>
-          <!-- Fresh Strawberries Menu End -->
+        </div>
+        <!-- Fresh Strawberries Accordion Paragraph End -->
+        <!-- Fresh Strawberries Menu End -->
 
 
 
-          <!-- Strawberry Candies Menu Start -->
-          <section id="menu">
-            <div class="container">
-              <div class="candy-strawberries-menu">
-                <div class="heading2">Strawberry Candies Menu</div>
+        <!-- Strawberry Candies Menu Start -->
+        <section id="menu">
+          <div class="container">
+            <div class="accordion" id="candy-strawberries-accordion">
+              <div class="accordion-item">
+                <div class="candy-strawberries-menu">
+                  <div class="heading2 d-block d-lg-none">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseStrawberryCandies" aria-expanded="true"
+                      aria-controls="collapseStrawberryCandies" id="candy-strawberries-accordion-header">
+                      Strawberry Candies Menu
+                    </button>
+                  </div>
 
-                <div class="container" id="menu-container">
-                  <div class="row">
+                  <div class="heading2 d-none d-lg-block">Strawberry Candies Menu</div>
+                  <!-- Fresh Strawberries Accordion Heading End -->
 
-                    <!-- Strawberry Licorice Card Start -->
-                    <div class="col-md-3 py-3 py-md-0">
-                      <div class="card" id="menu-card">
-                        <img src="./images/strawberry-licorice_edited.jpg" alt="Strawberry Licorice Candy">
+                  <!-- Fresh Strawberries Accordion Paragraph Start -->
+                  <div class="container" id="menu-container">
+                    <div id="collapseStrawberryCandies" class="accordion-collapse collapse show d-lg-block"
+                      aria-labelledby="heading-fresh-strawberries" data-bs-parent="#fresh-strawberries-accordion">
+                      <div class="accordion-body row">
 
-                        <div class="card-body" id="menu-card-body">
-                          <div class="star text-center">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
+                        <!-- Strawberry Licorice Card Start -->
+                        <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                          <div class="card" id="menu-card">
+                            <img src="./images/strawberry-licorice_edited.jpg" alt="Strawberry Licorice Candy">
+
+                            <div class="card-body" id="menu-card-body">
+                              <div class="star text-center">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                              </div>
+
+                              <h3>Strawberry Licorice</h3>
+                              <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                            </div>
                           </div>
-
-                          <h3>Strawberry Licorice</h3>
-                          <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
-
                         </div>
+                        <!-- Strawberry Licorice Card End -->
+
+                        <!-- Marshmallow Strawberry Card Start -->
+                        <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                          <div class="card" id="menu-card">
+                            <img src="./images/mm-strawberries-edited.jpg" alt="Marshmallow Strawberries">
+
+                            <div class="card-body" id="menu-card-body">
+                              <div class="star text-center">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                              </div>
+
+                              <h3>Marshmallow Strawberries</h3>
+                              <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Marshmallow Strawberry Card End -->
+
+                        <!-- Chocolate Dipped Strawberries Card Start -->
+                        <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                          <div class="card" id="menu-card">
+                            <img src="./images/cd-strawberries-edited.jpg" alt="Chocolate Dipped Strawberries">
+
+                            <div class="card-body" id="menu-card-body">
+                              <div class="star text-center">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                              </div>
+
+                              <h3>Chocolate Dipped Strawberries</h3>
+                              <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Chocolate Dipped Strawberries Card End -->
+
+                        <!-- Strawberry Icecream Card Start -->
+                        <div class="col-12 col-lg-6 col-xl-3 py-3 py-md-0">
+                          <div class="card" id="menu-card">
+                            <img src="./images/strawberry-icecream-edited.jpg" alt="Strawberry Icecream">
+
+                            <div class="card-body" id="menu-card-body">
+                              <div class="star text-center">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                              </div>
+
+                              <h3>Strawberry Icecream</h3>
+                              <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Strawberry Icecream Card End -->
                       </div>
                     </div>
-                    <!-- Strawberry Licorice Card End -->
-
-                    <!-- Marshmallow Strawberry Card Start -->
-                    <div class="col-md-3 py-3 py-md-0">
-                      <div class="card" id="menu-card">
-                        <img src="./images/mm-strawberries-edited.jpg" alt="Marshmallow Strawberries">
-
-                        <div class="card-body" id="menu-card-body">
-                          <div class="star text-center">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                          </div>
-
-                          <h3>Marshmallow Strawberries</h3>
-                          <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
-
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Marshmallow Strawberry Card End -->
-
-                    <!-- Chocolate Dipped Strawberries Card Start -->
-                    <div class="col-md-3 py-3 py-md-0">
-                      <div class="card" id="menu-card">
-                        <img src="./images/cd-strawberries-edited.jpg" alt="Chocolate Dipped Strawberries">
-
-                        <div class="card-body" id="menu-card-body">
-                          <div class="star text-center">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                          </div>
-
-                          <h3>Chocolate Dipped Strawberries</h3>
-                          <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
-
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Chocolate Dipped Strawberries Card End -->
-
-                    <!-- Strawberry Icecream Card Start -->
-                    <div class="col-md-3 py-3 py-md-0">
-                      <div class="card" id="menu-card">
-                        <img src="./images/strawberry-icecream-edited.jpg" alt="Strawberry Icecream">
-
-                        <div class="card-body" id="menu-card-body">
-                          <div class="star text-center">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                          </div>
-
-                          <h3>Strawberry Icecream</h3>
-                          <p>$100 <span class="fa-solid fa-cart-shopping"></span></p>
-
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Strawberry Icecream Card End -->
                   </div>
                 </div>
               </div>
-              <!-- Strawberry Candies Menu End -->
+            </div>
+          </div>
+          <!-- Strawberry Candies Menu End -->
+        </section>
+  </div>
+  <!-- Menu End -->
 
+  <!-- Contact Us Start -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="heading2">Contact <span>Us</span></div>
+          <div id="contact-p">
+            <p>Pam's Strawberries would love to hear your feedback!
+              <br><br>Leave us a message and we'll get back to you as soon as possible!<br>
+            </p>
+          </div>
+          <input type="text" class="form-control" placeholder="Name" aria-label="Default Input Example">
+          <input type="email" class="form-control" placeholder="Email Address" aria-label="Default Input Example">
+          <input type="number" class="form-control" placeholder="Phone Number" aria-label="Default Input Example">
+          <button id="send-message-btn">Send Message</button>
+        </div>
 
-
-
-          </section>
-          <!-- Menu End -->
+        <div class="col-md-4" id="col">
+          <h1>Info</h1>
+          <div class="contact-us-info">
+            <p><i class="fa-regular fa-envelope"></i> example@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> 123-456-7890</p>
+            <p><i class="fa-solid fa-building-columns"></i> Flint, Michigan 48505</p>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, beatae.</p>
+        </div>
       </div>
+    </div>
+  </section>
+  <!-- Contact Us End -->
+
+  <!-- Footer Start -->
+  <footer id="footer">
+    <div class="footer-logo text-center"><img src="./images/logo.png" alt="Pam's Strawberries Logo"></div>
+    <div class="social-links text-center">
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-pinterest-p"></i>
+    </div>
+
+    <!-- Credits Start -->
+    <div class="credits text-center">
+      Designed by <a href="https://github.com/Thomas-Hatt"><span>Thomas Hatt</span></a>
+    </div>
+
+    <div class="copyright text-center">
+      &copy; Copyright <strong><span>Pam's Strawberries</span></strong>. All rights reserved.
+    </div>
+    <!-- Credits End -->
+  </footer>
+  <!-- Footer End -->
+
 </body>
 
 </html>
